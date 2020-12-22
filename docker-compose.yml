@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+      - TZ=Asia/Tokyo
+      - TARGET_DIR=data
+      - EXECUTE_DATE=2020-12-21
+    command: bash -c 'ruby main.rb'
+    volumes:
+      - .:/workspace
